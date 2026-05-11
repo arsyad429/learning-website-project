@@ -1,0 +1,156 @@
+/* resources/css/login_style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container utama diatur layoutnya menggunakan Flexbox */
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%; /* Memberi jarak di kiri dan kanan */
+    position: relative;
+}
+
+/* Bagian Kiri (Teks) */
+.login-left {
+    color: #ffffff;
+    max-width: 500px;
+    z-index: 2;
+}
+
+.login-left h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.login-left p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Bagian Kanan (Form Login) */
+.login-right {
+    z-index: 2;
+}
+
+/* Efek Glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1); /* Putih dengan transparansi 10% */
+    backdrop-filter: blur(12px); /* Efek blur kaca */
+    -webkit-backdrop-filter: blur(12px); /* Untuk browser safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Garis tepi tipis dan transparan */
+    border-radius: 20px;
+    padding: 50px 40px;
+    width: 450px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
+}
+
+/* Styling Input Form */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.input-group input {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    padding: 0 15px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #f4f4f4;
+}
+
+/* Tombol Sign In */
+.btn-signin {
+    width: 100%;
+    height: 50px;
+    background-color: #3b4158; /* Warna biru gelap sesuai desain */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: #2a2f42;
+}
+
+/* Teks Register */
+.register-text {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.register-text a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+/* Styling Pesan Error */
+.error-message {
+    background-color: rgba(255, 107, 107, 0.2); /* Merah transparan */
+    color: #ff6b6b; /* Merah cerah */
+    border: 1px solid rgba(255, 107, 107, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN UNTUK HANDPHONE
+   ========================================= */
+@media screen and (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0 5%;
+    }
+    
+    .login-left {
+        margin-bottom: 40px;
+    }
+    
+    .login-left h1 {
+        font-size: 3rem;
+    }
+
+    .glass-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 40px 30px;
+    }
+}
